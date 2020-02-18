@@ -1,0 +1,53 @@
+#GraphDisplay-Cont{
+    background-color: #282c34;
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: center;
+}
+.Graph{
+    margin: 10px;
+    border-radius: 15px;
+    width: 90%;
+    display: inline-flex;
+}
+canvas{
+    max-height: 75vh !important;
+}
+#left-btn{
+    float: left;
+    color: #282c34;
+    border-radius: 15px;
+    margin: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+    border: 3px solid #282c34;
+    margin-top: 10px;
+    width: 30%;
+}
+#right-btn{
+    float: right;
+    color: #282c34;
+    border-radius: 15px;
+    margin: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+    border: 3px solid #282c34;
+    margin-top: 10px;
+    width: 30%;
+    position: relative;
+    bottom: 95px;
+}
+#center-btn{
+    color: #282c34;
+    border-radius: 15px;
+    margin: auto;
+    padding-top: 10px;
+    font-size: 20px;
+    border: 3px solid #282c34;
+    margin-top: 10px;
+    width: 30%;
+    position: relative;
+}

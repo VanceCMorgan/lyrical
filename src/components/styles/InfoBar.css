@@ -1,0 +1,16 @@
+.InfoBar-Cont{
+    width: 60%;
+    margin: auto;
+    border-radius: 15px;
+    background-color: #282c34;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+@media (max-width: 500px){
+    .InfoBar-Cont{
+        width: 80%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

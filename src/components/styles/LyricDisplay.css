@@ -1,0 +1,49 @@
+#LyricDisplay-Cont{
+    width: 45%;
+    height: 400px;
+    margin: 2.5%;
+    background-color: #282c34;
+    border-radius: 15px;
+    overflow-y: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#lyricsDisplay{
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+    overflow-y: auto;
+}
+#lyricsDisplay a{
+    text-decoration: none;
+    color: lightgray;
+}
+@media (max-width: 700px){
+    #LyricDisplay-Cont{
+        width: 90%;
+        margin: 3.5%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* width */
+.scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
