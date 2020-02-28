@@ -12,6 +12,7 @@ import {useSelector,useDispatch} from 'react-redux';
 import axios from 'axios';
 import './styles/SearchBar.css';
 
+//This component is used to search the genius database for songs
 export const SearchBar = () => {
     const colour = useSelector(state => state.colour);
     const queryString = useSelector(state => state.queryString);
@@ -19,6 +20,8 @@ export const SearchBar = () => {
     // will request an external api for us...
     //http://openlibrary.org/search.json?q=the+lord+of+the+rings
     const search =async () => {
+    /*make call to the genius api for songs matching the current search string(from redux store)
+    */
 	const response = await axios({
         method: "Get",
         url: "/search?access_token=XYurJbndpFN6VnYbMRnYKm27e4GGYVwwFz8wS4rzEWw6YL3RwZnN8VEUlDR78q8l&per_page=40&page=1&q=" + queryString,

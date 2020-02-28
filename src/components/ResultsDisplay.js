@@ -1,4 +1,4 @@
-import React,{ Component } from "react";
+import React from "react";
 import './styles/ResultsDisplay.css';
 import {showStats} from '../actions/showStats';
 import {newLyrics} from '../actions/newlyrics';
@@ -12,6 +12,7 @@ import axios from 'axios';
 import "react-table-v6/react-table.css";
 import myLoaderComponent from './myLoadingComponent';
 
+//Displays the song resultss of query to Genius API 
 export const ResultsDisplay = () => {
     const colour = useSelector(state => state.colour);
     const showResult = useSelector(state=> state.showResult);
@@ -20,6 +21,8 @@ export const ResultsDisplay = () => {
     const isLoading = useSelector(state => state.isLoading);
     const dispatch = useDispatch();
     var wordDict={};
+
+    //removes html tags from the string html
     function stripHtml(html)
     {
       html = html.replace(/<br>/g," ");
@@ -28,7 +31,7 @@ export const ResultsDisplay = () => {
       return tmp.textContent || tmp.innerText || "";
     }
 
-    
+//returns a dictionary representing key=>word value=>totalCount    
 function getWordCounts(inputString){
     if(inputString != ""){
         var words = inputString.split(' ');
@@ -45,7 +48,9 @@ function getWordCounts(inputString){
     }
     
 }
-
+    //makes a call to the server to begin scraping the seleceted url
+    //also handles dispatching the actionsrequired to match the loading and result state graphically
+    //ie display spinner, hide resultTable etc...
     const view = async (url,title,artist) => {
         dispatch(toggleLoading(true));
         var response;

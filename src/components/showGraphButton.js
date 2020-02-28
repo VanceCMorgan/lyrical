@@ -3,9 +3,9 @@ import {useSelector,useDispatch} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import {showGraph} from '../actions/showGraph';
 import './styles/showGraphButton.css';
+//Used to toggle the graph display
 export const ShowGraphButton = () => {
     const colour = useSelector(state => state.colour);
-    const queryString = useSelector(state => state.queryString);
     const shouldShow = useSelector(state => state.showGraph);
     const dispatch = useDispatch();
     const show = () => {

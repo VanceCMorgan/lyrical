@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import {useSelector,useDispatch} from 'react-redux';
-import './styles/InfoBar.css'
+import './styles/InfoBar.css';
+
+//Displays the name and artist of the currently selected song
 export const InfoBar = () => {
     const colour = useSelector(state => state.colour);
     const showStats = useSelector(state => state.showStats);

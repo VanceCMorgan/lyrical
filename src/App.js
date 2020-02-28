@@ -8,14 +8,9 @@ import {NavMenu} from './components/NavMenu';
 import {InfoBar} from './components/InfoBar';
 import './components/styles/App.css';
 import {ShowGraphButton} from './components/showGraphButton';
-import {showGraph} from './actions/showGraph';
-import {useSelector,useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 function App() {
-  const dispatch = useDispatch();
-  const show = () => {
-    dispatch(showGraph());
-  }
   const anyError = useSelector(state=>state.error);
   const shouldShow = useSelector(state=>state.showStats);
     return (

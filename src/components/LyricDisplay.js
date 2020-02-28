@@ -1,14 +1,15 @@
 import React,{ Component } from "react";
 import {useSelector,useDispatch} from 'react-redux';
 import Highlight from 'react-highlight';
-import './styles/LyricDisplay.css'
-import './styles/sunburst.css'
+import './styles/LyricDisplay.css';
+import './styles/sunburst.css';
+
+//This component displays the lyrics for the currently selected song
 export const LyricDisplay = () => {
     const colour = useSelector(state => state.colour);
     const showStats = useSelector(state => state.showStats);
     var strippedLyrics = useSelector(state => state.lyrics);
     var highlighter = useSelector(state => state.word);
-    //console.log("highlight =>" + highlighter);
     var words = strippedLyrics.split("<");
     strippedLyrics = "";
     words.forEach(word => {
@@ -22,9 +23,6 @@ export const LyricDisplay = () => {
         strippedLyrics = strippedLyrics.concat("<"+ word + " ");
       }
     });
-    function createMarkup() {
-      return {__html: strippedLyrics};
-    }
       return (
         <div>
           {showStats == 1 && 

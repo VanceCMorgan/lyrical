@@ -1,10 +1,11 @@
-import React, { useReducer } from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import React from 'react';
+import {Container, Navbar, NavbarBrand} from 'reactstrap';
 import { BrowserRouter, Link} from 'react-router-dom';
-import {useSelector,useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {MyPicker} from './blockPicker';
 import './styles/NavMenu.css';
 
+//Top component that displays title link and colour picker component
 export const NavMenu = () => {
   const colour = useSelector(state => state.colour);
   return(

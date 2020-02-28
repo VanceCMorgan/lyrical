@@ -2,6 +2,8 @@ import React,{ Component } from "react";
 import Spinner from './Spinner';
 import {useSelector,useDispatch} from 'react-redux';
 import './styles/LoadComponent.css';
+
+//overrides the default react table loading component
 export const MyLoaderComponent = () => {
     const isLoading = useSelector(state => state.isLoading);
     const colour = useSelector(state => state.colour);

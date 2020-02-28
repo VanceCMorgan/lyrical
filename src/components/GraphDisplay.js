@@ -5,12 +5,13 @@ import {newChartType} from '../actions/newChartType'
 import pSBC from 'shade-blend-color';
 import {useSelector,useDispatch} from 'react-redux';
 
+//This component displays the graphs of lyric counts and options to change the graph type
 export const GraphDisplay = () => {
     const dispatch = useDispatch();
     const colour = useSelector(state => state.colour);
-    const chartType = useSelector(state => state.chartType);
     const showGraph = useSelector(state=> state.showGraph);
     const active = pSBC ( -0.3, colour );
+    //these methods are used to handle the active state of the buttons
     const leftButtonPress = () =>{
         document.getElementById("left-btn").style.backgroundColor = active;
         document.getElementById("center-btn").style.backgroundColor = colour;
