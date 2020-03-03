@@ -52,6 +52,6 @@ async function scrapeProduct(url){
   
   //  browser.close();
 }
-var server = app.listen(9000,function(){
+var server = app.listen( process.env.PORT || 9000,function(){
   console.log("ready");
 });
