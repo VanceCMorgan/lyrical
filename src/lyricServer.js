@@ -20,7 +20,7 @@ app.get('/scraper',async function (req,res){
 });
 
 app.get('/',function(req,res){
-  res.sendFile('https://lyrical-heroku.herokuapp.com/index.html');
+  res.sendFile('public/index.html');
 });
 
 
