@@ -1,6 +1,7 @@
 var express = require('express');
 var cors = require('cors');
 var app =express();
+const path = require('path');
 const puppeteer = require('puppeteer');
 
 
@@ -19,7 +20,7 @@ app.get('/scraper',async function (req,res){
 });
 
 app.get('/',function(req,res){
-  res.sendFile((__dirname+'/public/index.html'))
+  res.sendFile(path.join(__dirname+'/public/index.html'));
 });
 
 
