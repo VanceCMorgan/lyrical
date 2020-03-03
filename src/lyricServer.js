@@ -20,7 +20,7 @@ app.get('/scraper',async function (req,res){
 });
 
 app.get('/',function(req,res){
-  res.sendFile('/app/public/index.html');
+  res.sendFile('lyrical/public/index.html');
 });
 
 
