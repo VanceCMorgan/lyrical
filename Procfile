@@ -1,1 +1,1 @@
-web: node lyricServer.js
+web: node src/lyricServer.js
