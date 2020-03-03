@@ -22,6 +22,7 @@
     "react-table-v6": "^6.8.6",
     "react-tooltip": "^4.0.3",
     "reactstrap": "^8.4.1",
+    "redux": "^4.0.5",
     "shade-blend-color": "^1.0.0"
   },
   "scripts": {
