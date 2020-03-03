@@ -18,7 +18,7 @@ app.get('/scraper',async function (req,res){
    res.send(pr);
 });
 
-app.get('*',function(req,res){
+app.get('/',function(req,res){
   res.sendFile((__dirname+'/public/index.html'))
 });
 
