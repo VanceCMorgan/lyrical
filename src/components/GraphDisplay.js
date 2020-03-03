@@ -1,4 +1,4 @@
-import React,{ Component } from "react";
+import React from "react";
 import Chart from './Chart';
 import './styles/GraphDisplay.css'
 import {newChartType} from '../actions/newChartType'
@@ -32,7 +32,7 @@ export const GraphDisplay = () => {
     }
         return (
             <div>
-                { showGraph == 1 && 
+                { showGraph === 1 && 
                 <div id="GraphDisplay-Cont" style={{color: "Gray",border: "3px solid " + colour}}>
                     <Chart />
                     <div id="left-btn" onClick={leftButtonPress}  style={{backgroundColor: colour}}>

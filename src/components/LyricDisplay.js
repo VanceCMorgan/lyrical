@@ -1,5 +1,5 @@
-import React,{ Component } from "react";
-import {useSelector,useDispatch} from 'react-redux';
+import React from "react";
+import {useSelector} from 'react-redux';
 import Highlight from 'react-highlight';
 import './styles/LyricDisplay.css';
 import './styles/sunburst.css';
@@ -17,7 +17,7 @@ export const LyricDisplay = () => {
         word = word.slice(0, 8) + "https://www.Genius.com" + word.slice(8);
         word = word.slice(0, 2) + "target='_blank' " + word.slice(2);
       }  
-      if(strippedLyrics==""){
+      if(strippedLyrics===""){
         strippedLyrics = strippedLyrics.concat(word + " ");
       }else{
         strippedLyrics = strippedLyrics.concat("<"+ word + " ");
@@ -25,7 +25,7 @@ export const LyricDisplay = () => {
     });
       return (
         <div>
-          {showStats == 1 && 
+          {showStats === 1 && 
           <div id="LyricDisplay-Cont" style={{color: "Gray",border: "3px solid " + colour}}>
             <h3>Lyrics</h3>
             <div id="lyricsDisplay">

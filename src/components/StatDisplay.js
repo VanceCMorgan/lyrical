@@ -1,7 +1,6 @@
-import React,{ Component } from "react";
+import React from "react";
 import ReactTable from "react-table-v6";
-import {newWord} from '../actions/newWord'
-import {useSelector,useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 import './styles/StatDisplay.css';
 
 //this component displays the word counts for the currently selected songs lyrics
@@ -23,9 +22,9 @@ export const StatDisplay = () => {
     //strip any html tags left and add to the items list (data for table)
     for (var key in wordDictionary) {
         var value = wordDictionary[key];
-        if(key!= "" && !key.includes("=") && !key.includes("--") && !key.includes("_id")){
+        if(key!== "" && !key.includes("=") && !key.includes("--") && !key.includes("_id")){
             listItems.push({
-                "Word": key.replace(/\[|\]|\?|\}|\,|\"|\.|\:|\(|\)/g," "),
+                "Word": key.replace(/\[|\]|\?|\}|,|"|\.|:|\(|\)/g," "),
                  "Count": value 
             });
         }
@@ -34,7 +33,7 @@ export const StatDisplay = () => {
         return (
             <div>
                 <p className="rt-td"></p>
-                {showStats ==1 && 
+                {showStats ===1 && 
                 <div id="StatDisplay-Cont" style={{color: "Gray",border: "3px solid " + colour}}>
                  <h3>Lyric Counts</h3>
                  <ReactTable className="myStatTable" id="statTable"

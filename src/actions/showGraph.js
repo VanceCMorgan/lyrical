@@ -1,5 +1,5 @@
 export const showGraph = (negate) => {
-    if(negate ==0){
+    if(negate ===0){
         return{
             type: 'toggleGraph',
             payload: negate

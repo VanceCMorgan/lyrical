@@ -1,9 +1,7 @@
-import React,{ Component } from "react";
-import {useSelector,useDispatch} from 'react-redux';
+import React from "react";
+import {useSelector} from 'react-redux';
 import {Bar, Line, Pie} from 'react-chartjs-2';
-import pSBC from 'shade-blend-color';
 export const Chart = () => {
-    var colour = useSelector(state => state.colour);
     const choice = useSelector(state => state.choice);
     const dictionary = useSelector(state => state.dictionary);
     const chartType = useSelector(state => state.chartType);
@@ -26,7 +24,7 @@ export const Chart = () => {
             backgroundColor: myColours
         }]
     }
-    if(chartType == 'Pie'){
+    if(chartType === 'Pie'){
         return (
             <div id="chart" className="Chart">
             <Pie 
@@ -51,7 +49,7 @@ export const Chart = () => {
             />
             </div>
             );
-    }else if(chartType == 'Bar'){
+    }else if(chartType === 'Bar'){
         return (
             <div id="chart" className="Chart">
             <Bar 

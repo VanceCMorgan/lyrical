@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React from 'react';
 import {useSelector,useDispatch} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import {showGraph} from '../actions/showGraph';
@@ -13,14 +13,14 @@ export const ShowGraphButton = () => {
     }
         return (
             <div className="GraphButton-Cont" >
-                { shouldShow == 1 &&
+                { shouldShow === 1 &&
                     <div onClick={show} id="showGraphButton" style={{backgroundColor: colour}}
                     data-for="main"
                     data-tip="Click to view Graphs of this data!"
                     data-iscapture="true"
                     >Hide Graph</div>
                 }
-                { shouldShow == 0 &&
+                { shouldShow === 0 &&
                     <div onClick={show} id="showGraphButton" style={{backgroundColor: colour}}
                     data-for="main"
                     data-tip="Click to view Graphs of this data!"

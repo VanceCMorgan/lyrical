@@ -1,4 +1,4 @@
-import React,{ Component } from "react";
+import React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 import {searchSubmit} from '../actions/searchSubmit';
@@ -40,7 +40,7 @@ export const SearchBar = () => {
         return (
             <div className="SearchBar-Cont" >
                 <input autoFocus autoComplete="off"  maxLength="35" value={queryString} onChange={keyUp} id="searchInput" placeholder="Title or Artist" style={{color: colour, border: "3px solid " + colour}} className="SearchBar" onKeyPress={event => {
-                    if (event.key == 'Enter'){
+                    if (event.key === 'Enter'){
                         search();
                     }
                 }}/>

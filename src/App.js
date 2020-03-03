@@ -16,13 +16,13 @@ function App() {
     return (
       <div className="App" style={{backgroundColor: 'darkGrey',height: "400px"}}>
         <NavMenu />
-        {anyError != "" &&<p className="error">{anyError}</p>}
+        {anyError !== "" &&<p className="error">{anyError}</p>}
         <SearchBar/>
         <InfoBar/>
         <ResultsDisplay />
         <StatDisplay />
         <LyricDisplay />
-        {shouldShow == 1 && <ShowGraphButton />}
+        {shouldShow === 1 && <ShowGraphButton />}
         <GraphDisplay />
       </div>
     );

@@ -33,7 +33,7 @@ export const ResultsDisplay = () => {
 
 //returns a dictionary representing key=>word value=>totalCount    
 function getWordCounts(inputString){
-    if(inputString != ""){
+    if(inputString !== ""){
         var words = inputString.split(' ');
         words.forEach(function(w) {
             if (!wordDict[w]) {
@@ -41,7 +41,7 @@ function getWordCounts(inputString){
             }
             wordDict[w] += 1;
         });
-        if(showStats==1){
+        if(showStats===1){
             dispatch(newDictionary(wordDict));
         }
         return wordDict;
@@ -60,12 +60,12 @@ function getWordCounts(inputString){
                 url: "/scraper?url="+url,
                 baseURL: "http://localhost:9000"
              });
-             if(response == "ERROR"){
+             if(response === "ERROR"){
                  console.log("gotERror");
                  dispatch(toggleLoading(false));
                  dispatch(newError("Failed to load the web scraping tool please try again!"));
              }
-             if(response.data == "ERROR"){
+             if(response.data === "ERROR"){
                 dispatch(toggleLoading(false));
                 dispatch(showStats(0));
                 dispatch(newError("Failed to load the web scraping tool please try again!"));
@@ -110,7 +110,7 @@ function getWordCounts(inputString){
         });
             return (
                 <div>
-                    {(showStatsFromStore == 0 || isLoading ==1) && 
+                    {(showStatsFromStore === 0 || isLoading ===1) && 
                     <div className="ResultsDisplay-Cont" style={{color: "Gray",border: "3px solid " + colour}}>
                     <ReactTable id="resultTable"
                     columns = {columns}
