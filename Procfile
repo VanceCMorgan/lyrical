@@ -1,1 +1,1 @@
-web: node src/lyricServer.js
+web: npm start
