@@ -19,8 +19,8 @@ app.get('/scraper',async function (req,res){
    res.send(pr);
 });
 
-app.get('/',function(req,res){
-    res.send("Not for You!");
+app.get('*',function(req,res){
+  res.sendFile(path.join(__dirname+'/public/index.html'))
 });
 
 
